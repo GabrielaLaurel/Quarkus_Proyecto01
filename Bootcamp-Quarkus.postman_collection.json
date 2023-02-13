@@ -1,0 +1,600 @@
+{
+	"info": {
+		"_postman_id": "369b4323-a047-45e6-aaca-750d885c0e71",
+		"name": "Bootcamp-Quarkus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "Listar clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoCliente\": \"1\",\r\n    \"tipoDocumento\": \"1\",\r\n    \"numeroDocumento\": \"78451236\",\r\n    \"nombreRazonSocial\": \"Pepito Quispe Yupanqui\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoCliente\": \"1\",\r\n    \"tipoDocumento\": \"1\",\r\n    \"numeroDocumento\": \"78451236\",\r\n    \"nombreRazonSocial\": \"Pepito Quispe Farfan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"42"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuenta bancaria",
+			"item": [
+				{
+					"name": "Listar cuentas bancarias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuenta-bancaria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuenta-bancaria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar cuenta bancaria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuenta-bancaria/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuenta-bancaria",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar cuenta bancaria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"12345698796331\",\r\n    \"cci\": \"98745632145678912377\",\r\n    \"tipoCuenta\": \"2\",\r\n    \"tipoMoneda\": \"1\",\r\n    \"saldo\": 1640.00,\r\n    \"clienteId\": 1,\r\n    \"tarjetaId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuenta-bancaria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuenta-bancaria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cuenta bancaria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"12345698796331\",\r\n    \"cci\": \"98745632145678912377\",\r\n    \"tipoCuenta\": \"2\",\r\n    \"tipoMoneda\": \"2\",\r\n    \"saldo\": 1700.00,\r\n    \"clienteId\": 1,\r\n    \"tarjetaId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuenta-bancaria/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuenta-bancaria",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cuenta bancaria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuenta-bancaria/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuenta-bancaria",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "depositar saldo de cuenta bancaria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuenta-bancaria/depositar-saldo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuenta-bancaria",
+								"depositar-saldo"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "12345698796325",
+									"disabled": true
+								},
+								{
+									"key": "saldo",
+									"value": "200",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tarjeta",
+			"item": [
+				{
+					"name": "Listar tarjeta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/tarjeta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"tarjeta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar tarjeta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/tarjeta/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"tarjeta",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar tarjeta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipotarjeta\": \"2\",\r\n    \"numeroTarjeta\": \"9874561231472532\",\r\n    \"pin\": \"1414\",\r\n    \"codigoValidacion\": \"285\",\r\n    \"fechaVencimiento\": \"2025-02-09\",\r\n    \"numeroCuenta\": \"86427894561258\",\r\n    \"fechaCorte\": \"2024-02-09\",\r\n    \"fechaLimitePagoMensual\": \"2023-01-23\",\r\n    \"saldoActual\": 100.50,\r\n    \"limiteCredito\": 200.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/tarjeta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"tarjeta"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "credito",
+			"item": [
+				{
+					"name": "Listar creditos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar credito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/credito/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credito",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar credito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaInicio\":\"2023-02-09\",\r\n    \"cuota\": 4,\r\n    \"fechaPagoMensual\": \"2023-02-09\",\r\n    \"saldoInicial\": 2500.00,\r\n    \"saldoActual\": 1500.00,\r\n    \"numeroCredito\": \"98765432987654\",\r\n    \"clienteId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar credito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaInicio\":\"2023-02-09\",\r\n    \"cuota\": 4,\r\n    \"fechaPagoMensual\": \"2023-02-09\",\r\n    \"saldoInicial\": 2500.00,\r\n    \"saldoActual\": 1200.00,\r\n    \"numeroCredito\": \"98765432987654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credito/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credito",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar credito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/credito/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credito",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "operacion",
+			"item": [
+				{
+					"name": "Listar operaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/operacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"operacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar operacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/operacion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"operacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar operacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Pago de tarjeta de credito\",\r\n    \"monto\": 150,\r\n    \"tipoOperacion\": \"4\",\r\n    \"numeroCuentaCredito\": \"98765432987654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/operacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"operacion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pago credito o tarjeta de credito",
+			"item": [
+				{
+					"name": "Listar pagos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/pago-credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"pago-credito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoPago\": \"1\",\r\n    \"numeroCredito\": \"98765432987654\",\r\n    \"cantidadCuotas\": 1,\r\n    \"monto\": 150,\r\n    \"fecha\": \"2023-02-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/pago-credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"pago-credito"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
